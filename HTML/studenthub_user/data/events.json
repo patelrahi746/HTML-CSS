@@ -1,0 +1,19 @@
+{
+  "events": [
+    {"title": "Hackathon 2026", "date": "2026-11-15", "description": "48‑hour coding marathon for students."},
+    {"title": "Guest Lecture: AI Ethics", "date": "2026-11-20", "description": "Prof. Smith discusses ethical AI."},
+    {"title": "Sports Meet", "date": "2026-12-01", "description": "Annual inter‑college sports competition."},
+    {"title": "Cultural Fest", "date": "2026-12-10", "description": "Music, dance, and drama performances."},
+    {"title": "Career Fair", "date": "2027-01-05", "description": "Top companies recruiting engineering graduates."},
+    {"title": "Workshop: Web Dev", "date": "2027-01-12", "description": "Hands‑on HTML, CSS, JS for beginners."},
+    {"title": "Alumni Meet", "date": "2027-01-20", "description": "Networking with alumni members."},
+    {"title": "Robotics Competition", "date": "2027-02-02", "description": "Student teams build autonomous bots."},
+    {"title": "Science Exhibition", "date": "2027-02-15", "description": "Showcase of student research projects."},
+    {"title": "Winter Break", "date": "2027-02-20", "description": "Semester break for students."},
+    {"title": "Seminar: Cloud Computing", "date": "2027-03-01", "description": "Introduction to cloud platforms."},
+    {"title": "Math Olympiad", "date": "2027-03-10", "description": "Competitive math problem solving."},
+    {"title": "Hackathon 2027", "date": "2027-04-05", "description": "Second hackathon of the year."},
+    {"title": "Music Concert", "date": "2027-04-18", "description": "Live performances by student bands."},
+    {"title": "Graduation Ceremony", "date": "2027-05-01", "description": "Celebrating the graduating class."}
+  ]
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard – StudentHub</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/admin.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/student.js" defer></script>
+    <script src="js/event.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <a href="admin.html#students">Students</a> |
+            <a href="admin.html#events">Events</a> |
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Student Management Section (already functional) -->
+        <section id="students">
+            <h2>Student Management</h2>
+            <div id="student-container"></div>
+        </section>
+
+        <!-- Event Management Section -->
+        <section id="events">
+            <h2>Event Management</h2>
+            <button id="add-event-btn">Add Event</button>
+            <table id="event-table" class="admin-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Poster</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Event Modal -->
+    <div id="event-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" id="close-event-modal">&times;</span>
+            <h3 id="modal-title">Add Event</h3>
+            <form id="event-form" enctype="multipart/form-data">
+                <input type="hidden" name="id" id="event-id">
+                <label>Title:<br>
+                    <input type="text" name="title" id="event-title" required>
+                </label><br>
+                <label>Date:<br>
+                    <input type="date" name="event_date" id="event-date" required>
+                </label><br>
+                <label>Description:<br>
+                    <textarea name="description" id="event-description" rows="4"></textarea>
+                </label><br>
+                <label>Poster (optional):<br>
+                    <input type="file" name="poster" id="event-poster" accept="image/*">
+                </label><br>
+                <button type="submit" id="event-submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Simple modal handling (reused for events)
+        const modal = document.getElementById('event-modal');
+        const closeBtn = document.getElementById('close-event-modal');
+        const addBtn = document.getElementById('add-event-btn');
+        const form = document.getElementById('event-form');
+        const modalTitle = document.getElementById('modal-title');
+        const eventIdInput = document.getElementById('event-id');
+        const titleInput = document.getElementById('event-title');
+        const dateInput = document.getElementById('event-date');
+        const descInput = document.getElementById('event-description');
+        const posterInput = document.getElementById('event-poster');
+
+        addBtn.addEventListener('click', () => {
+            modalTitle.textContent = 'Add Event';
+            eventIdInput.value = '';
+            titleInput.value = '';
+            dateInput.value = '';
+            descInput.value = '';
+            posterInput.value = '';
+            modal.style.display = 'block';
+        });
+        closeBtn.addEventListener('click', () => modal.style.display = 'none');
+        window.addEventListener('click', e => { if (e.target === modal) modal.style.display = 'none'; });
+    </script>
+</body>
+</html>

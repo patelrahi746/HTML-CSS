@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub | Events</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <header>
+        <button id="theme-toggle" aria-label="Toggle theme">Dark Mode</button>
+        <span id="menu-toggle" aria-label="Toggle navigation">&#9776;</span>
+        <h1>🎓 StudentHub</h1>
+        <nav id="nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="events.html">Events</a>
+            <a href="contactfaculty.html">Contact</a>
+        </nav>
+        <hr>
+    </header>
+
+    <section id="main" class="events-section">
+        <h2>Upcoming Events</h2>
+        <input type="text" id="search" placeholder="Search events..." aria-label="Search events" style="width:100%;padding:10px;margin-bottom:20px;" />
+        <div class="cards" id="eventsContainer"></div>
+        <div style="text-align:center;margin-top:20px;" id="pagination">
+            <button id="prevBtn" disabled>Prev</button>
+            <span id="pageInfo"></span>
+            <button id="nextBtn" disabled>Next</button>
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>© 2026 StudentHub | Computer Engineering Project</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/events.js"></script>
+</body>
+</html>
